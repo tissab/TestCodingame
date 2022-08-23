@@ -48,7 +48,7 @@ namespace TestCodingame
 
             //Exo_22.Test();
 
-            var r2 = Exo_25.Reshape1(3, "abc de fghij");
+            var r2 = Exo_25.Reshape(3, "abc de fghij");
            // var r3 = Exo_25.Reshape(2, "1 23 456");
 
             Console.WriteLine(r2);
