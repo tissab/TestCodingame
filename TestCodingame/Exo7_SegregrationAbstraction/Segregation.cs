@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestCodingame.Exo7
+namespace TestCodingame.SegregationAbstraction
 {
-    class Exo_7
+    class Segregation
     {
         /*
          Des deux propostions c'est la proposition 1 que je prefere

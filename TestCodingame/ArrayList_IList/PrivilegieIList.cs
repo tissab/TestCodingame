@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestCodingame.Exo6
+namespace TestCodingame.ArrayList_IList
 {
-    class Exo_6
+    class PrivilegieIList
     {
         // ArrayList herite de IList donc c'est la methode qui retourne IList qui sera la plus privilegiee
 

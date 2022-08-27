@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestCodingame.Exo9
 {
-    public static class Exo_9
+    public static class LinqMax
     {
         public static int  CountMax()
         {
