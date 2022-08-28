@@ -48,10 +48,13 @@ namespace TestCodingame
 
             //Exo_22.Test();
 
-            var r2 = Exo_25.Reshape(3, "abc de fghij");
-           // var r3 = Exo_25.Reshape(2, "1 23 456");
+            //var r2 = Exo_25.Reshape(3, "abc de fghij");
+            // var r3 = Exo_25.Reshape(2, "1 23 456");
 
-            Console.WriteLine(r2);
+            //Console.WriteLine(r2);
+
+            //Console.WriteLine("Le resultat est : {0}", 01|11);
+            Console.WriteLine("Le resultat est : {0}", 1<<0);
 
             // 4 - Exo
             #region Exo 4
@@ -77,7 +80,7 @@ namespace TestCodingame
 
             #region Exo 13
             /*
-             En base 2 (binaire) combien font 01 | 11 ==> ( 100 avec un peu de doute)
+             En base 2 (binaire) combien font 01 | 11 ==>  11
              */
             #endregion
 
