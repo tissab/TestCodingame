@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using TestCodingame.Error_Method;
 using TestCodingame.Exo10;
 using TestCodingame.Exo11;
 using TestCodingame.Exo14;
@@ -9,6 +12,7 @@ using TestCodingame.Exo18;
 using TestCodingame.Exo22;
 using TestCodingame.Exo25;
 using TestCodingame.Exo9;
+using TestCodingame.Max_Weight;
 
 namespace TestCodingame
 {
@@ -53,8 +57,10 @@ namespace TestCodingame
 
             //Console.WriteLine(r2);
 
-            //Console.WriteLine("Le resultat est : {0}", 01|11);
-            Console.WriteLine("Le resultat est : {0}", 1<<0);
+            //Console.WriteLine("Le resultat est : {0}", 01 | 11); //=> 11;
+            //Console.WriteLine("Le resultat est : {0}", 00 | 11); //=> 11;
+            //Console.WriteLine("Le resultat est : {0}", 10&11); //=> 10;
+            //Console.WriteLine("Le resultat est : {0}", 1<<0); //=> 1
 
             // 4 - Exo
             #region Exo 4
@@ -83,6 +89,16 @@ namespace TestCodingame
              En base 2 (binaire) combien font 01 | 11 ==>  11
              */
             #endregion
+
+            // string[] res = { "AD", "EW", "PO", "JU", "CS" };
+
+            int[] arr = { 10, 8, 3, 8};
+
+            Solution s = new Solution();
+            s.MaxWeight(arr, 3, 17);
+
+            //Console.WriteLine("Resultat trouve : {0}", s.);
+
 
         }
 
