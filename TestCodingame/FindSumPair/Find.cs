@@ -29,5 +29,16 @@ namespace TestCodingame.FindSumPair
             }
             return pairs;
         }
+
+        public static int FindMinDiff(int[] arr, int n)
+        {
+            int diff = int.MaxValue;
+
+            for (int i = 0; i < n - 1; i++)
+                for (int j = i + 1; j < n; j++)
+                    if (Math.Abs((arr[i] - arr[j])) < diff)
+                        diff = Math.Abs((arr[i] - arr[j]));
+            return diff;
+        }
     }
 }

@@ -13,6 +13,7 @@ using TestCodingame.Exo22;
 using TestCodingame.Exo25;
 using TestCodingame.Exo9;
 using TestCodingame.Max_Weight;
+using TestCodingame.Nombre_DePaires;
 
 namespace TestCodingame
 {
@@ -92,12 +93,13 @@ namespace TestCodingame
 
             // string[] res = { "AD", "EW", "PO", "JU", "CS" };
 
-            int[] arr = { 10, 8, 3, 8};
+            //int[] arr = { 10, 8, 3, 8};
 
-            Solution s = new Solution();
-            s.MaxWeight(arr, 3, 17);
+            //Solution s = new Solution();
+            //s.MaxWeight(arr, 3, 17);
 
-            //Console.WriteLine("Resultat trouve : {0}", s.);
+            int res = Paires.NombredePaires(4);
+            Console.WriteLine("Resultat trouve : {0}", res);
 
 
         }
