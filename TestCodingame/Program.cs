@@ -98,9 +98,10 @@ namespace TestCodingame
             //Solution s = new Solution();
             //s.MaxWeight(arr, 3, 17);
 
-            int res = Paires.NombredePaires(4);
-            Console.WriteLine("Resultat trouve : {0}", res);
+            //int res = Paires.NombredePaires(4);
+            //Console.WriteLine("Resultat trouve : {0}", res);
 
+            Exo_25.Reshape_2(3, "AWER ZXD FHJ FRH RBY PKKF");
 
         }
 

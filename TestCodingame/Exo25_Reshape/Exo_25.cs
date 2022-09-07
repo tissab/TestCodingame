@@ -52,5 +52,25 @@ namespace TestCodingame.Exo25
 
             return res;
         }
+
+        public static string Reshape_2(int n, string str)
+        {
+            var a = str.Trim().Split(null);
+            var strBuilder = new StringBuilder(str.Length);
+            string modiStr;
+            for(int i = 0; i<a.Length; i++)
+            {
+                strBuilder.Append(a[i]);
+            }
+
+            modiStr = strBuilder.ToString();
+
+            var r = Enumerable.Range(0, modiStr.Length / n)
+                              .Select(i => modiStr.Substring(i * n, n));
+
+            var res = string.Join("\r", r);
+
+            return "";
+        }
     }
 }
