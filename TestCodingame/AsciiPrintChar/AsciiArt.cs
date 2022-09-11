@@ -13,7 +13,7 @@ namespace TestCodingame.AsciiPrintChar
             return letter.ToString();
         }
 
-        static char ScanChar(string s)
+        public static char ScanChar(string s)
         {
             //bool charFound = false;
             char lettre = '?';

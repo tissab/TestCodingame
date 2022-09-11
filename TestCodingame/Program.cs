@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using TestCodingame.AsciiPrintChar;
+using TestCodingame.Calculator;
 using TestCodingame.Error_Method;
 using TestCodingame.Exo10;
 using TestCodingame.Exo11;
@@ -12,6 +15,7 @@ using TestCodingame.Exo18;
 using TestCodingame.Exo22;
 using TestCodingame.Exo25;
 using TestCodingame.Exo9;
+using TestCodingame.FindSmallInterval;
 using TestCodingame.Max_Weight;
 using TestCodingame.Nombre_DePaires;
 
@@ -53,15 +57,17 @@ namespace TestCodingame
 
             //Exo_22.Test();
 
-            //var r2 = Exo_25.Reshape(3, "abc de fghij");
+            var r2 = Exo_25.Reshape(3, "abc de fghij");
             // var r3 = Exo_25.Reshape(2, "1 23 456");
 
-            //Console.WriteLine(r2);
+            Console.WriteLine("abc\rde\rfghij");
 
             //Console.WriteLine("Le resultat est : {0}", 01 | 11); //=> 11;
             //Console.WriteLine("Le resultat est : {0}", 00 | 11); //=> 11;
-            //Console.WriteLine("Le resultat est : {0}", 10&11); //=> 10;
+            //Console.WriteLine("Le resultat est : {0}", 10 & 11); //=> 10;
             //Console.WriteLine("Le resultat est : {0}", 1<<0); //=> 1
+            //Console.WriteLine("Le resultat est : {0}",  0<<1); //=> 0
+
 
             // 4 - Exo
             #region Exo 4
@@ -101,11 +107,38 @@ namespace TestCodingame
             //int res = Paires.NombredePaires(4);
             //Console.WriteLine("Resultat trouve : {0}", res);
 
-            Exo_25.Reshape_2(3, "AWER ZXD FHJ FRH RBY PKKF");
+            //Exo_25.Reshape_2(3, "AWER ZXD FHJ FRH RBY PKKF");
+
+            /*
+             * 
+             int number = 0b_0001_0100_1000_0001;
+             int largeNumber = 10_000_00;
+             un moyen pratique d'exprimer des valeurs intégrales, indiquant exactement les bits stockés en mémoire pour cet entier
+             
+             */
+
+            //int[] arr = new int[100000];
+            //var random = new Random();
+            //for (int i = 0; i < 100000; i++)
+            //{
+            //    arr[i] = random.Next(1,1000000);
+            //}
+
+            //int[] arr = { 1,6,4,8,2,1,2 };
+
+            //var rt = FindSmall.FindSmallestIntervall(arr);
+
+            //Console.WriteLine("Resultat trouve : {0}", rt);
+
+            //var res = Calcul.Sum("-1.001","1.01");
+            //Console.WriteLine("Resultat trouve : {0}", res);
+
+            //var res = AsciiArt.ScanChar("A");
+            //Console.WriteLine("Resultat trouve : {0}", res);
 
         }
 
-     
+
     }
 
    

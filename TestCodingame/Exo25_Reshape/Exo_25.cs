@@ -9,41 +9,45 @@ namespace TestCodingame.Exo25
     class Exo_25
     {
 
-        public static String Reshape(int n, String str)
+        public static string Reshape(int n, string str)
         {
-            String modifStr;
-            if(str == null)
-            {
-                return str;
-            }
+           
+            //if(str == null)
+            //{
+            //    return str;
+            //}
 
-            var strs = str.Trim().Split(null);
-            var strBuilder = new StringBuilder(strs.Length);
-            for(int i = 0; i< strs.Length; i++)
-            {
-                strBuilder.Append(strs[i]);
-            }
-            modifStr = strBuilder.ToString();
+            //var strs = str.Trim().Split(null);
+            //var strBuilder = new StringBuilder(strs.Length);
+            //for(int i = 0; i< strs.Length; i++)
+            //{
+            //    strBuilder.Append(strs[i]);
+            //}
+            //modifStr = strBuilder.ToString();
 
-            int nbChar = modifStr.Length;
+            //int nbChar = modifStr.Length;
 
-            if(nbChar <= n)
-            {
-                return modifStr;
-            }
+            //if(nbChar <= n)
+            //{
+            //    return modifStr;
+            //}
+
+            var modifStr = str.Replace(" ","");
 
             int newStrLength = modifStr.Length;
 
             string whiteSpace = "\r";
 
-            for(int i = n; i <= newStrLength; i += n)
+            var strBuilder = new StringBuilder(modifStr.Length);
+
+            for (int i = n; i <= newStrLength; i += n)
             {
                 modifStr = modifStr.Insert(i, whiteSpace);
                 i++;
                 newStrLength++;
             }
             
-            return modifStr;
+            return modifStr.ToString();
         }
 
         public static String Reshape1(int n, String str)
@@ -70,7 +74,7 @@ namespace TestCodingame.Exo25
 
             var res = string.Join("\r", r);
 
-            return "";
+            return res;
         }
     }
 }
