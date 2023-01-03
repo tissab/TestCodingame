@@ -3,21 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using TestCodingame.AsciiPrintChar;
-using TestCodingame.Calculator;
-using TestCodingame.Error_Method;
-using TestCodingame.Exo10;
-using TestCodingame.Exo11;
-using TestCodingame.Exo14;
-using TestCodingame.Exo15;
-using TestCodingame.Exo17;
-using TestCodingame.Exo18;
-using TestCodingame.Exo22;
-using TestCodingame.Exo25;
-using TestCodingame.Exo9;
-using TestCodingame.FindSmallInterval;
-using TestCodingame.Max_Weight;
-using TestCodingame.Nombre_DePaires;
 
 namespace TestCodingame
 {
@@ -57,7 +42,7 @@ namespace TestCodingame
 
             //Exo_22.Test();
 
-            var r2 = Exo_25.Reshape(3, "abc de fghij");
+            //var r2 = Exo_25.Reshape(3, "abc de fghij");
             // var r3 = Exo_25.Reshape(2, "1 23 456");
 
             Console.WriteLine("abc\rde\rfghij");
