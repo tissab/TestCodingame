@@ -19,11 +19,9 @@ namespace Reshape
 
             int newStrLength = modifStr.Length;
 
-            string whiteSpace = "\r";
-
             for (int i = n; i <= newStrLength; i += n)
             {
-                modifStr = modifStr.Insert(i, whiteSpace);
+                modifStr = modifStr.Insert(i, Environment.NewLine);
                 i++;
                 newStrLength++;
             }
