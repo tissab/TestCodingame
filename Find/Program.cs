@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Find
@@ -7,12 +8,16 @@ namespace Find
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var numbers = new int[] { 1, 5, 8, 1, 2, 13, 0, 10, 3, 2, 11 };
+            var res = FindSumpair(numbers, 13);
+            Console.WriteLine($"Le resultat est : {res}");
         }
 
         public static int[] FindSumpair(int[] numbers, int k)
         {
-            int[] pairs = new int[2];
+            var pairs = new int[] { 0, 0 };
+
+            List<int[]> ls = new List<int[]>();
 
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -21,15 +26,14 @@ namespace Find
                     if (numbers[i] + numbers[j] == k)
                     {
                         pairs = new int[] { i, j };
-
-                        if (numbers[i] + numbers[j] != k)
-                        {
-                            pairs = new int[] { 0, 0 };
-                        }
+                        ls.Add(pairs);
                     }
                 }
             }
-            return pairs;
+
+            var res = ls.OrderBy(x => x[0]).First();
+
+            return res;
         }
 
         public static int FindMinDiff(int[] arr, int n)
@@ -43,39 +47,5 @@ namespace Find
             return diff;
         }
 
-        public static int FindSmallestIntervall(int[] numbers)
-        {
-            if (numbers.Length == 0) return -1;
-
-            numbers = numbers.Select(x =>
-            {
-                if (x < 0)
-                {
-                    return -x;
-                }
-                return x;
-            }).ToArray();
-
-            numbers = numbers.OrderBy(x => x).Distinct().ToArray();
-
-            var interval = Math.Abs(numbers[0] - numbers[1]);
-
-            //int max = int.MaxValue;
-
-            //for(int i = 0; i < numbers.Length; i++)
-            //{
-            //    for(int j = i+1; j<numbers.Length; j++)
-            //    {
-            //        var interval = Math.Abs(numbers[i] - numbers[j]);
-            //        if (interval < max)
-            //        {
-            //            max = interval;
-            //        }
-            //    }
-            //}
-
-
-            return interval;
-        }
     }
 }

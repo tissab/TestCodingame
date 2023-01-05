@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MaxWeight
@@ -7,58 +8,51 @@ namespace MaxWeight
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var res = MaxWeight(new int[] { 10, 8, 3, 8 }, 5, 17);
+            Console.WriteLine($"Total : {res}");
         }
 
         public static int MaxWeight(int[] weights, int w1, int w2)
         {
+            List<int> arrayW1 = new List<int>();
 
-            var orderWeight1 = weights.OrderBy(x => x).Where(x => x <= w1).ToArray();
-            var orderWeight2 = weights.OrderBy(x => x).Where(x => x <= w2).ToArray();
+            List<int> arrayW2 = new List<int>();
 
-            if (orderWeight1.Length == 0 && orderWeight2.Length == 0)
+            for(int i = 0; i < weights.Length; i++)
             {
-                return 0;
-            }
-
-            //var listw1 = weights.Where(x => x < w1).ToArray();
-            var listw2 = weights.Where(x => x < w2).OrderByDescending(x => x).ToArray();
-
-            //CalcW(w1, listw1, listw1.Length);
-            CalcW(w2, listw2, listw2.Length);
-
-            return -1;
-        }
-        private static void CalcW(int value, int[] arr, int nbr)
-        {
-            if (nbr > 0)
-            {
-                int calc = 0;
-                nbr = nbr - 1;
-                for (int i = 0; i <= nbr; i++)
+                if (weights[i] <= w1)
                 {
-                    calc += arr[i];
-                    if (calc <= value)
+                    arrayW1.Add(weights[i]);
+                }
+
+                if (weights[i] <= w2)
+                {
+                    arrayW2.Add(weights[i]);
+                }
+
+                for (int j = i+1; j < weights.Length; j++)
+                {
+                    if(weights[i] <= w1)
                     {
-                        an.Add(calc);
-                        if (calc == value)
+                        if (weights[i] + weights[j] <= w1)
                         {
-                            break;
+                            arrayW1.Add(weights[i] + weights[j]);
                         }
                     }
-                    else
-                    {
-                        calc -= arr[i];
-                    }
 
-                    if (i == nbr)
+                    if (weights[i] <= w2)
                     {
-                        arr = arr.Where((x, i) => i != 0).ToArray();
-                        CalcW(value, arr, arr.Length);
+                        if(weights[i] + weights[j] <= w2)
+                        {
+                            arrayW2.Add(weights[i] + weights[j]);
+                        }
                     }
-
                 }
             }
+
+            var res = arrayW1.Max() + arrayW2.Max();
+
+            return res;
         }
     }
 }

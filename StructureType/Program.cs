@@ -9,7 +9,7 @@ namespace StructureType
             /*
           Ce programme affiche :
                 - 0
-                - 5 *  => Les variables de type struct ou simple n'ont pas de reference ou d'adresse memoire il copie la valeur et non l'adresse
+                - 5 *  => Les variables de type struct ou simple n'ont pas de reference ou d'adresse memoire il copie la valeur et non l'adresse memoire
                 - 10
                 - null
           */

@@ -6,7 +6,9 @@ namespace CalcArray
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] array = { 0, 1, 2, 3, 4, 5, 6 };
+
+            Console.WriteLine($"Hello World! {CalcArray.Calc(array,0,5)}");
         }
     }
 
@@ -27,6 +29,19 @@ namespace CalcArray
             }
 
             return total;
+        }
+    }
+
+    class Base
+    {
+        public virtual void Foo() { }
+    }
+
+    class Bar: Base
+    {
+        public sealed override void Foo()
+        {
+            base.Foo();
         }
     }
 }
