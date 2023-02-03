@@ -11,7 +11,7 @@ namespace MaxProfil
             // [-1,9,0,8,-5,6,-24] => [1,5]
             int[] arr = { -1, 9, 0, 8, -5, 6, -24 }; 
             var res = MaxProfil(arr);
-            Console.WriteLine("Hello World!");
+            Console.WriteLine($"Hello World! [{res}");
         }
 
         static int [] MaxProfil(int[] data)

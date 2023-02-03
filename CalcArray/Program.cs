@@ -28,6 +28,11 @@ namespace CalcArray
                 }
             }
 
+            // OU
+
+            //  int retour = array.Where((a, i) => i >= n1 && i <= n2).Sum();
+
+
             return total;
         }
     }

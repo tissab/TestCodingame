@@ -7,7 +7,8 @@ namespace ComputeJoinPoint
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var res = ComputeJoinPoint(471, 480);
+            Console.WriteLine($"Hello World! {res}");
         }
 
         static int ComputeJoinPoint(int s1, int s2)
@@ -41,7 +42,7 @@ namespace ComputeJoinPoint
 
                 return nombre_1;
             }
-            catch (Exception)
+            catch (FormatException)
             {
 
                 return 0;

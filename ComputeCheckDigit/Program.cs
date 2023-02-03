@@ -7,7 +7,8 @@ namespace ComputeCheckDigit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var res = ComputeCheckDigit("343428");
+            Console.WriteLine($"Hello World! {res}");
         }
 
         static int ComputeCheckDigit(string identificateurNumber)
@@ -33,7 +34,10 @@ namespace ComputeCheckDigit
             int lastNumber = result % 10;
 
             // Soustrayer le dernier chiffre à 10
-
+            if(lastNumber == 0)
+            {
+                return 0;
+            }
             return result = 10 - lastNumber;
 
         }

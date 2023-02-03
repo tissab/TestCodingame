@@ -20,13 +20,29 @@ namespace LocatUniversal
             /// <returns></returns>
 
             //var rep = @"C:\";
-            var rep = @"tmp/documents";
-            var fileName = "universe-formula";
+            var fileName = "kadher";
+            var filepath = @"tmp\documents";
 
-            DirectoryInfo dr = new DirectoryInfo(rep);
-            FileInfo[] allFiles = dr.GetFiles(fileName, SearchOption.AllDirectories);
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            var rootPath = allDrives is null ? @"C:\" : allDrives[0].Name;
+
+            var dirsInit = string.Concat(rootPath, filepath);
+
+            if (!Directory.Exists(dirsInit)) return null;
+
+            DirectoryInfo dr = new DirectoryInfo(dirsInit);
+
+            FileInfo[] allFiles = dr.GetFiles($"{fileName}.*", SearchOption.AllDirectories);
 
             return allFiles.Select(p => p.FullName).FirstOrDefault();
+
+            //var rep = @"tmp/documents";
+            //var fileName = "universe-formula";
+
+            //DirectoryInfo dr = new DirectoryInfo(rep);
+            //FileInfo[] allFiles = dr.GetFiles(fileName, SearchOption.AllDirectories);
+
+            //return allFiles.Select(p => p.FullName).FirstOrDefault();
 
         }
     }

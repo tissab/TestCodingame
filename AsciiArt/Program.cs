@@ -1,16 +1,18 @@
 ﻿using System;
 
-namespace AsciiArt
+namespace AsciiArt_
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string art = AsciiArt
+            Answer.PrintChar("")
             Console.WriteLine("Hello World!");
         }
     }
 
-    class AsciiArt
+    class Answer
     {
         static string PrintChar(char letter)
         {
