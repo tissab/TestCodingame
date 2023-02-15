@@ -28,68 +28,19 @@ namespace RendreMonnaie
     {
         public static Change OptimalChange(long s)
         {
-            Change change = new Change();
+            hange change = new Change();
 
-            int[] moneyArr = { 10, 5, 2, 0 };
-
-            bool res = false;
-
-            int i = 0;
-
-            while(i <= moneyArr.Length)
-            {
-                if (s >= moneyArr[i])
-                {
-                    if (moneyArr[i] == 0)
-                    {
-                        break;
-                    }
-                    res = moneyArr.Any(x => x == (s - moneyArr[i]) % moneyArr[i]);
-                    if(res == false)
-                    {
-                        res = moneyArr.Any(x => x == (s - moneyArr[i]) % 2);
-                    }
-                    if(res == true)
-                    {
-                        s = s - moneyArr[i];
-                        if(s >= 0)
-                        {
-                            switch (moneyArr[i])
-                            {
-                                case 2:
-                                    change.coin2 = change.coin2 + 1;
-                                    break;
-                                case 5:
-                                    change.bill5 = change.bill5 + 1;
-                                    break;
-                                case 10:
-                                    change.bill10 = change.bill10 + 1;
-                                    break;
-                            }
-                        }
-                        if(s >= moneyArr[0])
-                        {
-                            i = 0;
-                            continue;
-                        }
-
-                        if(s >= moneyArr[1])
-                        {
-                            i = 1;
-                            continue;
-                        }
-
-                        if(s >= moneyArr[2])
-                        {
-                            i = 2;
-                            continue;
-                        }
-                    }
-                }
-
-                i++;
+        if (s % 2 == 1) {
+            s -= 5;
+            if (s < 0) {
+                return null;
             }
-            return change;
+            change.bill5 = 1;
+        }
+        change.bill10 = s / 10;
+        change.coin2 = (s % 10) / 2;
+        
+        return change;
         }
 
         public static int RendreLaMonnaie(int purchases, int amount_paid)
