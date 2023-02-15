@@ -14,6 +14,18 @@ namespace Dictionnary
             //m[o1] = 1;
             //m[o2] = 2;
 
+            var r1 = new Dictionary<string, int>
+            {
+                { "a", 21 },
+                { "b", 20 },
+            };
+
+            var y = r1["a"];
+
+            //var f = r1.TryGetValue("a", out t1);
+
+
+
             var r = new Dictionary<Personne, int>
             {
                 { new Personne { Nom = "Bassit", Prenom = "Diby", Age = 34}, 21 },
@@ -21,7 +33,9 @@ namespace Dictionnary
                 { new Personne { Nom = "Bassit", Prenom = "Diby", Age = 34}, 18 }
             };
 
-            int t = 12;
+            var f = r[new Personne { Nom = "Bassit", Prenom = "Diby", Age = 34 }];
+
+            int t ;
             
             r.TryGetValue(new Personne { Nom = "Bassit", Prenom = "Diby", Age = 34 },out t);
 

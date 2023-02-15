@@ -16,7 +16,9 @@ namespace MaxProfil
 
         static int [] MaxProfil(int[] data)
         {
-            List<(int, int[])> rapport = new List<(int, int[])>();
+
+            int[] res = new int[2];
+            int comp = 0;
 
             for(int i = 0; i < data.Length; i++)
             {
@@ -25,12 +27,13 @@ namespace MaxProfil
                 for(int j = i+1 ; j < data.Length; j++)
                 {
                     calc += data[j];
-                    rapport.Add((calc,new int[2] {i,j}));
+                    if(comp < calc)
+                    {
+                        comp = calc;
+                        res = new int[2] { i, j };
+                    }
                 }      
             }
-
-            var res = rapport.OrderByDescending(x => x.Item1).FirstOrDefault().Item2;
-
             return res;
         }
     }
