@@ -46,6 +46,19 @@ class Pi
 
         return 4 * (double)(nbreSucces / pts.Count());
     }
+    
+    
+    //dernier version ajouter par KIPRE
+    public static double Approx_(Point[] pts)
+    {
+     int into = 0;
+        for (int i = 0; i < pts.Length; i++) {
+            Point p = pts[i];
+            if (p.x*p.x + p.y*p.y <= 1) into++;
+        }
+        // pi / 4 = into / n
+        return (double)into / (double)(pts.Length) * 4d;  
+     }
 }
 
 class Point
