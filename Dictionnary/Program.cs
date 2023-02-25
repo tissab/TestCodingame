@@ -7,12 +7,12 @@ namespace Dictionnary
     {
         static void Main(string[] args)
         {
-            //var m = new Dictionary<object, int>();
-            //var o1 = new object();
+            var m = new Dictionary<object, int>();
+            var o1 = new object();
 
-            //var o2 = o1;
-            //m[o1] = 1;
-            //m[o2] = 2;
+            var o2 = o1;
+            m[o1] = 1;
+            m[o2] = 2;
 
             var r1 = new Dictionary<string, int>
             {

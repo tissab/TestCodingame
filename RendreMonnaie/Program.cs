@@ -28,19 +28,20 @@ namespace RendreMonnaie
     {
         public static Change OptimalChange(long s)
         {
-            hange change = new Change();
+            Change change = new Change();
 
-        if (s % 2 == 1) {
-            s -= 5;
-            if (s < 0) {
-                return null;
+            if (s % 2 == 1) 
+            {
+                s -= 5;
+                if (s < 0) {
+                    return null;
+                }
+                change.bill5 = 1;
             }
-            change.bill5 = 1;
-        }
-        change.bill10 = s / 10;
-        change.coin2 = (s % 10) / 2;
+            change.bill10 = s / 10;
+            change.coin2 = (s % 10) / 2;
         
-        return change;
+            return change;
         }
 
         public static int RendreLaMonnaie(int purchases, int amount_paid)

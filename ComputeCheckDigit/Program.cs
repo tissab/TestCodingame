@@ -7,7 +7,7 @@ namespace ComputeCheckDigit
     {
         static void Main(string[] args)
         {
-            var res = ComputeCheckDigit("343428");
+            var res = ComputeCheckDigit("34");
             Console.WriteLine($"Hello World! {res}");
         }
 
