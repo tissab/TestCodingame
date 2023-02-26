@@ -22,12 +22,12 @@ namespace FindSmallestInterval
             {
                 for(int j = i+1; j<arr.Length; j++)
                 {
-                    var a = arr[j];
-                    var b = arr[i];
-                    var res = (a - b);
+                    var a = arr[i];
+                    var b = arr[j];
+                    var res = (b - a);
                     if (res < comp)
                     {
-                        comp = arr[j] - arr[i];
+                        comp = res;
                     }
                 }
             }
