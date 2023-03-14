@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var res = code.MagicStone(new string[] { "2", "1", "3", "2" });
+var res = code.MagicStone(new string[] { "1", "2", "1" });
 
 Console.WriteLine($"Hello, World! {res}");
 

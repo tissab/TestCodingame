@@ -15,11 +15,10 @@ for (int i = 0; i < rands.Length; i++)
     rands[i] = p;
 }
 
-Console.WriteLine(Pi.Approx(rands));
+Console.WriteLine(Pi.Approx_(rands));
 
 class Pi
-{
-       
+{ 
     public static double Approx(Point[] pts)
     {
         var pointsThatSatisfyTheFormula = new ArrayList();
@@ -46,10 +45,9 @@ class Pi
 
         return 4 * (double)(nbreSucces / pts.Count());
     }
-    
-    
+     
     //dernier version ajouter par KIPRE
-    public static double Approx_(Point[] pts)
+    public static double Approx_V1(Point[] pts)
     {
      int into = 0;
         for (int i = 0; i < pts.Length; i++) {

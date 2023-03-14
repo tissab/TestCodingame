@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-
+var res = code.TriangleDePascal(4, 2);
 class code
 {
     /// <summary>
@@ -50,4 +50,3 @@ class code
     }
 }
 
-}

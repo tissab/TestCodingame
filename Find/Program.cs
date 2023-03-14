@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Find
 {
@@ -10,6 +12,7 @@ namespace Find
         {
             var numbers = new int[] { 1, 5, 8, 1, 2, 13, 0, 10, 3, 2, 11 };
             var res = FindSumpair(numbers, 13);
+
             Console.WriteLine($"Le resultat est : {res}");
         }
 
@@ -47,5 +50,9 @@ namespace Find
             return diff;
         }
 
+       
+
+
+       
     }
 }

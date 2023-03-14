@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestCodingame", "TestCodingame\TestCodingame.csproj", "{D11580A6-695C-4966-8623-22546A4F0C11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Z-Knowledge", "TestCodingame\Z-Knowledge.csproj", "{D11580A6-695C-4966-8623-22546A4F0C11}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiArt_", "AsciiArt\AsciiArt_.csproj", "{27E659EF-A57C-49A1-851C-69F115FE36F5}"
 EndProject
@@ -103,7 +103,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encode_", "Encode_\Encode_.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoeudTerminal", "NoeudTerminal\NoeudTerminal.csproj", "{7AB17011-5F7C-415E-A72A-831DB131CB55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindNetWorkEndPoint", "FindNetWorkEndPoint\FindNetWorkEndPoint.csproj", "{0B5175D5-B12D-41E0-8D6F-48A759E08936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindNetWorkEndPoint", "FindNetWorkEndPoint\FindNetWorkEndPoint.csproj", "{0B5175D5-B12D-41E0-8D6F-48A759E08936}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebuildMessage", "RebuildMessage\RebuildMessage.csproj", "{E2A89BCA-838D-46E0-8165-816EC6FC87A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Check", "Check\Check.csproj", "{977CA402-B54C-4820-B180-C4F46323A49A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindRectangle", "FindRectangle\FindRectangle.csproj", "{D8D333A4-CA78-4A1B-89C9-F93DDE7EE3EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputeFinalPosition", "ComputeFinalPosition\ComputeFinalPosition.csproj", "{99263551-45C3-4B34-BE7F-526AD685BE2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -315,6 +323,22 @@ Global
 		{0B5175D5-B12D-41E0-8D6F-48A759E08936}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B5175D5-B12D-41E0-8D6F-48A759E08936}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B5175D5-B12D-41E0-8D6F-48A759E08936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A89BCA-838D-46E0-8165-816EC6FC87A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A89BCA-838D-46E0-8165-816EC6FC87A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A89BCA-838D-46E0-8165-816EC6FC87A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A89BCA-838D-46E0-8165-816EC6FC87A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{977CA402-B54C-4820-B180-C4F46323A49A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977CA402-B54C-4820-B180-C4F46323A49A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977CA402-B54C-4820-B180-C4F46323A49A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977CA402-B54C-4820-B180-C4F46323A49A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D333A4-CA78-4A1B-89C9-F93DDE7EE3EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D333A4-CA78-4A1B-89C9-F93DDE7EE3EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D333A4-CA78-4A1B-89C9-F93DDE7EE3EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D333A4-CA78-4A1B-89C9-F93DDE7EE3EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99263551-45C3-4B34-BE7F-526AD685BE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99263551-45C3-4B34-BE7F-526AD685BE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99263551-45C3-4B34-BE7F-526AD685BE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99263551-45C3-4B34-BE7F-526AD685BE2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

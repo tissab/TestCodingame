@@ -2,10 +2,14 @@
 using System.Linq;
 using System.Collections.Generic;
 
+var res = code.ComputeGameState("Bob", "Anna", new string[] { "Bob", "Anna", "Bob" });
+
+Console.WriteLine(res);
+
 public class code
 {
-    private int player1Score = 0;
-    private int player2Score = 0;
+    private static int player1Score = 0;
+    private static int player2Score = 0;
 
     private static readonly Dictionary<int, string> scoreLookup = new Dictionary<int, string>
     {
@@ -22,7 +26,7 @@ public class code
         { -1, "ADVANTAGE P2" }
     };
 
-    public string ComputeGameState(string nameP1, string nameP2, string[] wins)
+    public static string ComputeGameState(string nameP1, string nameP2, string[] wins)
     {
         foreach (string winner in wins)
         {
@@ -40,7 +44,7 @@ public class code
             if (score.StartsWith("DEUCE"))
             {
                 int scoreDiff = player1Score - player2Score;
-                if (scoreLookupDeuce.TryGetValue(scoreDiff, out string deuceState))
+                if (scoreLookupDeuce.TryGetValue(scoreDiff, out string? deuceState))
                 {
                     return deuceState;
                 }
@@ -52,7 +56,7 @@ public class code
                 {
                     return "DEUCE";
                 }
-                else if (scoreLookupDeuce.TryGetValue(scoreDiff, out string advantageState))
+                else if (scoreLookupDeuce.TryGetValue(scoreDiff, out string? advantageState))
                 {
                     return advantageState;
                 }
@@ -70,12 +74,23 @@ public class code
         return GetScore();
     }
 
-    private string GetScore()
+    private static string GetScore()
     {
         if (player1Score >= 3 && player2Score >= 3 && player1Score == player2Score)
         {
             return "DEUCE";
         }
+        // Ajouter par bassit***********************************************************
+        if(player1Score >=3 && player2Score >=3 && player1Score - player2Score > 1)
+        {
+            return "P1 ADVANTAGE";
+        }
+
+        if (player2Score  >= 3 && player1Score >= 3 &&  player2Score - player1Score > 1)
+        {
+            return "P2 ADVANTAGE";
+        }
+        //******************************************************************************
         else if (player1Score >= 4 && player1Score - player2Score >= 2)
         {
             return "P1 WINS";
@@ -84,7 +99,17 @@ public class code
         {
             return "P2 WINS";
         }
-        else if (scoreLookup.TryGetValue(player1Score, out string p1ScoreText) && scoreLookup.TryGetValue(player2Score, out string p2ScoreText))
+        // Ajouter par bassit***********************************************************
+        else if(player1Score == 1 && player2Score - player1Score == 0)
+        {
+            return "15a";
+        }
+        else if (player1Score == 2 && player2Score - player1Score == 0)
+        {
+            return "30a";
+        }
+        //******************************************************************************
+        else if (scoreLookup.TryGetValue(player1Score, out string? p1ScoreText) && scoreLookup.TryGetValue(player2Score, out string? p2ScoreText))
         {
             return $"P1 {p1ScoreText} - P2 {p2ScoreText}";
         }
