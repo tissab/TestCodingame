@@ -16,8 +16,16 @@ namespace ClosetToZero
 
     class A
     {
+        //Fonction optimale kader
         public static int ClosestZero(int[] ints)
         {
+            return ints.OrderBy(t => Math.Abs(t)).ThenBy(t => -t).FirstOrDefault();
+         }
+        
+        //Ancienne methode
+        public static int ClosestZero(int[] ints)
+        {
+            return ints.OrderBy(t => Math.Abs(t)).ThenBy(t => -t).FirstOrDefault();
             int res;
 
             if(ints.Length > 0)
