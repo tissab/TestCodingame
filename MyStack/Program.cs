@@ -8,8 +8,6 @@ namespace MyStack
     {
         static void Main(string[] args)
         {
-           
-
             MyStack stack = new MyStack(10000);
 
             Console.WriteLine("Memory Use {approx.}: " +(GC.GetTotalMemory(true)/1024 ) + " KBytes");

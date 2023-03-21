@@ -1,6 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-var res = code.MagicStone(new string[] { "1", "2", "1" });
+using System.Runtime.Intrinsics.Arm;
+using System.Text;
+using System;
+using Microsoft.VisualBasic;
+using System.Net.NetworkInformation;
+
+var res = code.Solution(new List<int> { 1,2,1 });
 
 Console.WriteLine($"Hello, World! {res}");
 
@@ -68,4 +74,71 @@ class code
         var afterCombinedCount = sortedPairs.Where(sp => sp.Value != 0).ToList();
         return afterCombinedCount.Count.ToString();
     }
+
+    public static int Magic(List<int> stones)
+    {
+        int result = 0;
+        bool sameLevelStonesExist = true;
+        while (sameLevelStonesExist && stones.Count > 1)
+        {
+            sameLevelStonesExist = false;
+            stones.Sort();
+            int i = 0;
+            while (i < stones.Count - 1)
+            {
+                if (stones[i] == stones[i + 1])
+                {
+                    sameLevelStonesExist = true;
+                    stones[i] += stones[i + 1];
+                    stones.RemoveAt(i + 1);
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            if (sameLevelStonesExist)
+            {
+                result++;
+            }
+        }
+        while (stones.Count > 1)
+        {
+            stones.Sort();
+            int newStone = stones[0] + stones[1];
+            stones.RemoveAt(0);
+            stones[0] = newStone;
+            result++;
+        }
+        return result;
+    }
+
+
+    public static int Solution(List<int> tab)
+    {
+        List<int> list = tab.ToList();
+
+        list.Sort();
+        int i = 0;
+        while (i < list.Count - 1)
+        {
+            if (list[i] == list[i + 1])
+            {
+                list.RemoveAt(i + 1);
+                int a = list[i];
+                list.RemoveAt(i);
+                list.Add(a + 1);
+                list.Sort();
+                i = 0;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        return list.Count;
+    }
+
+
+
 }

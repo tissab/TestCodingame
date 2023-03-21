@@ -115,7 +115,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeFinalPosition", "Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FIlterDuplicate_", "FIlterDuplicate_\FIlterDuplicate_.csproj", "{079E08C8-CFA4-4A19-B2FC-6A44A0086F3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyStack", "MyStack\MyStack.csproj", "{14A411F7-5869-43B7-A0D8-AF939CF09534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyStack", "MyStack\MyStack.csproj", "{14A411F7-5869-43B7-A0D8-AF939CF09534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSuperCustomers", "GetSuperCustomers\GetSuperCustomers.csproj", "{1421FB4E-79FB-4188-8B96-67BD74B7DB88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -351,6 +353,10 @@ Global
 		{14A411F7-5869-43B7-A0D8-AF939CF09534}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14A411F7-5869-43B7-A0D8-AF939CF09534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14A411F7-5869-43B7-A0D8-AF939CF09534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1421FB4E-79FB-4188-8B96-67BD74B7DB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1421FB4E-79FB-4188-8B96-67BD74B7DB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1421FB4E-79FB-4188-8B96-67BD74B7DB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1421FB4E-79FB-4188-8B96-67BD74B7DB88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

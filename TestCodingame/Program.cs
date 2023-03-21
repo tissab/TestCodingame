@@ -704,7 +704,7 @@ namespace TestCodingame
 
             #endregion
 
-            #region MyRegion
+            #region Reference
             /*
             Quel code-contre permet d'affecter une référence vers un tableau à une variable
             ref var  element = ref (variable1 != null ? ref variable2[x] : ref variable3[x]);
@@ -1305,6 +1305,28 @@ namespace TestCodingame
             
             d.AddHours(2);
             Console.WriteLine(f.Hour) => 0;
+
+            */
+            #endregion
+
+            #region Protected Internal
+            /*
+            Un attribut protégé interne (protected interne) est visible depuis
+            une classe appartenant à la même assembly => Vrai
+
+            En programmation orientée objet, un attribut protégé interne (protected interne)
+            est un niveau de protection qui permet à une classe d'accéder aux membres protégés
+            (attributs, propriétés, méthodes) d'une autre classe appartenant à la même assembly.
+
+            Cela signifie que si une classe A définit un membre comme protégé interne,
+            alors une autre classe B dans la même assembly que A peut accéder à ce membre.
+            En revanche, si une classe C à l'extérieur de l'assembly tente d'accéder à ce membre,
+            cela entraînera une erreur de compilation.
+
+            L'utilisation d'attributs protégés internes peut être utile pour restreindre
+            l'accès à certaines parties d'une classe tout en permettant l'accès à d'autres
+            classes du même projet. Cela peut contribuer à maintenir l'encapsulation
+            et à limiter les effets de bord indésirables.
 
             */
             #endregion
