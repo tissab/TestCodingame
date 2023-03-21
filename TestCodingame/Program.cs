@@ -691,7 +691,7 @@ namespace TestCodingame
             */
             #endregion
 
-            #region Slice Array
+            #region syntaxe d'indexation
 
             /*
                 Quel code permet de retourner les nombres 4;5;6 depuis le tableau
@@ -1057,12 +1057,15 @@ namespace TestCodingame
             /*
             Qu'elles sont les affirmations vrai concernant les classes "Tuple" et "ValueTuple"
 
-            1- Tuple et ValueTuple sont des types par valeur.
+            1- ValueTuple est un type par valeur, Tuple est un type par référence
+            3- Les données d'un Tuple sont en lecture seule, 
+                ce qui signifie qu'une fois que les valeurs ont été définies, 
+                elles ne peuvent pas être modifiées.
             2- Les données d'un ValueTuple sont modifiables, 
                car les valeurs sont stockées directement dans l'objet ValueTuple.
 
 
-            
+            Qu'elles sont les affirmations vrai concernant les classes "Tuple" et "ValueTuple"
             - Tuple et ValueTuple sont des types par valeur
             - ValueTuple est un type par valeur, Tuple est un type par référence
             - Tuple est un types par valeur, ValueTuple est un type par référence
@@ -1073,6 +1076,239 @@ namespace TestCodingame
             - Les données d'un value tuple sont en lecture seule
             */
             #endregion
+
+            #region NombreAvec_
+            /*
+            Pourquoi recommande t-on d'écrire les nombres de la façon suivante en C#
+            int number = 0b_0001_0100_1000_0001
+            int largeNumber = 10_000_000
+
+            Cela rend les nombres plus facile à lire
+
+            En C#, il est recommandé d'écrire les nombres de la façon suivante
+            pour améliorer la lisibilité et la compréhension du code :
+
+            Utilisation de l'underscore pour séparer les chiffres :
+            Dans l'exemple donné, l'utilisation de l'underscore pour séparer 
+            les chiffres dans l'écriture binaire de "0b_0001_0100_1000_0001" 
+            permet de faciliter la lecture et la compréhension du nombre binaire 
+            en le séparant en groupes de 4 bits. Cela rend le code plus facile à 
+            lire et à comprendre pour les développeurs.
+
+            Utilisation de l'underscore pour séparer les milliers : 
+            De même, l'utilisation de l'underscore pour séparer les milliers dans 
+            l'écriture décimale de "10_000_000" permet de séparer les chiffres 
+            en groupes de trois chiffres, ce qui améliore également la 
+            lisibilité et la compréhension du nombre.
+
+            Il est important de noter que l'utilisation de l'underscore
+            est facultative et n'affecte pas la valeur du nombre. 
+            C'est simplement une convention de codage qui est 
+            largement adoptée pour améliorer la lisibilité du code.
+
+
+
+
+
+
+
+            */
+            #endregion
+
+            #region Context de données
+            /*
+            public partial class MonContext: DbContext
+            {
+                public MonContext(DBContextOptions<MonContext> options):base(options)
+                {
+                }
+                
+                public virtual DbSet<Configuration> Configuration {get;set;}
+                
+                protected override void OnModelCreating(ModelBuilder modelBuilder)
+                {
+                    modelBuilder.HasAnnotation("Relational:Collation", French_CI)
+                    
+                    modelBuilder.Entity<Configuration>(
+                            entity =>
+                                   {
+                                        entity.HasKey(e => e.Key)
+                                              .HasName("PK_Configuration","dbo")
+                                        
+                                        entity.ToTable("Configuration","dbo");
+                                        
+                                        entity.Property(e => e.Key).HasMaxLength(50);
+
+                                        entity.Property(e => e.Value)
+                                              .IsRequired()
+                                              .HasMaxLength(50);
+                                   });
+                            this.OnModelCreatingPartial(modelBuilder);
+                }
+                partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+            } 
+
+            j'utilise mon context afin d'interroger ma base de donnée de la manière suivante:
+
+            public class ClassService
+            {
+                private readonly MonContext monContext;
+                
+                public ClassService(MonContext monContext)
+                {
+                    this.monContext = monContext;
+                }
+                
+                public Configuration GetConfigurationByKey(string configurationkey)
+                {
+                    bool GetSpecifiqueValue(configuration configuration) => configuration.Key == configurationkey
+                    return this.monContext.Configurations.SingleOrDefault(GetSpecifiqueValue);
+                }
+            }
+
+            Le code produit une requête SQL permettant de filtrer les configurations.
+
+            La méthode GetConfigurationByKey utilise le MonContext pour accéder à la
+            table de configuration dans la base de données. La méthode SingleOrDefault
+            est appelée sur l'ensemble des configurations pour filtrer les résultats
+            en fonction de la clé de configuration passée en paramètre.
+            Lorsque cette méthode est exécutée, elle génère une requête SQL qui est exécutée
+            par le moteur de base de données. Si une configuration avec la clé spécifiée
+            existe dans la base de données, elle sera retournée.
+            Si aucune configuration n'est trouvée, null sera retourné.
+
+            Il n'y a pas d'erreur de compilation dans ce code,
+            car les noms de variables et les méthodes sont correctement définis.
+            De plus, la méthode GetSpecifiqueValue n'est pas utilisée dans le contexte
+            d'une requête SQL, donc il n'y aura pas d'exception EntityFramework liée à cela. 
+
+            Que produit ce code?
+
+            - Générer une requete SQL remontant les configurations qui seront ensuite filtré.
+            - Cela ne compile pas
+            - Une exception de type EntityFramework, car la méthode GetSpecifiqueValue n'est pas connu de SQL
+            - Génère une requête SQL permettant de filtrer le configurations
+             
+            */
+            #endregion
+
+            #region TCP/IP
+            /*
+             Pour communiquer avec une machine via TCP/IP, on peut utiliser la ou les classes?
+             
+             - Socket
+
+             - Socket
+             - DatagramSocket
+             - InternetSocket
+            */
+            #endregion
+
+            #region NameSpace
+            /*
+            Est-il préférable, et si oui pourquoi, d'utiliser les types du namespace
+            System.Numerics plutôt que de créer ses propres types de vector ?
+            Sélectionner la meilleure réponse
+
+            La réponse correcte est : "Le runtime convertit les opérations sur ces types
+            en opérations adaptées au hardware sous-jacent ce qui améliore les performances."
+
+            - Le code utilisant ces types est plus concis et plus facile à lire 
+            - Il n'y a pas de bénéfice à le faire
+            - Ces types sont déjà disponible et prêts à l'emploi
+            - Le runtime convertit les opérations sur ces types en opérations adaptées
+              au hardware sous-jacent ce qui améliore les performances
+            */
+            #endregion
+
+            #region CompileServices.Unsafe
+            /*
+            Dans quelles circonstances les méthodes de la classe
+            System.Runtime.CompilerService.Unsafe devraient-elles être
+            utilisées?
+            Sélectionner la meilleure réponse : - Seulement en dernier recours
+
+            - Dès que l'empreinte mémoire doit être réduite
+            - Jamais
+            - Seulement en dernier recours
+            - Dès que les performances sont importantes
+            */
+            #endregion
+
+            #region CLR
+            /*
+            Parmi les assertions suivantes concernant le CLR,lesquelles sont vraie?
+
+            - Le code intermédiaire peut s'éxecuter sans CLR  => Faux
+            - Le CLR est a .Net ce que la JVM est à Java => Vrai
+            - Quel que soit le langage utilisé pour écrire une application .Net le code
+              doit être transformé en CIL => Vrai
+            - Une fois que le code est chargé dans le CLR, s'il est appélé, il est compilé
+              (si cela  n'a pas déjà été fait) immédiatement dans le langage natif  de la 
+              machine, puis exécuté.  => Vrai
+
+
+             */
+            #endregion
+
+            #region MyRegion
+            /*
+            Cochez la ou les proposition(s) correcte(s)
+
+            - L'encapsulation permet de clairement dissocier les spécifications d'une classe de son 
+              implémentation
+            - Le polymorphisme paramétrique se fait à l'éxécution du programme
+            - Le polymorphisme de coercition se fait à l'éxécution du programme
+            - En C#, on peut hériter de plusieurs interfaces
+
+            */
+            #endregion
+
+            #region Pattern Decorateur
+            /*
+            
+            Le nom du patron de conception (design pattern) est le Pattern Decorator
+            FileStream fin = new FileStream("X.zip",FIleMode.Create)
+            BufferedStream bin = new BufferedStream(fin)
+            GZipStream zin = new GZipStream(bin)
+            */
+            #endregion
+
+            #region XElement
+            /*
+             * 
+            var fruit = new XElement("fruit", "orange");
+            var panier1 = new XElement("panier", fruit);
+            var panier2 = new XElement("panier", fruit);
+            fruit.SetValue("pomme");
+            var r = panier2.Element("fruit").Value;
+
+            Console.WriteLine(panier2.Element("fruit").Value); // ==> Orange 
+
+            */
+            #endregion
+
+            #region Equals et GetHashCode
+            /*
+            Le contrat liant Equals() et GetHashCode dit que deux objets ayant le même
+            hashcode doivent être égaux => Vrai
+
+
+            */
+            #endregion
+
+            #region DateTime
+            /*
+            var d = new DateTime();
+            var f = DateTime.Now.AddHours(2);
+            d = f.AddHours(3);
+            
+            d.AddHours(2);
+            Console.WriteLine(f.Hour) => 0;
+
+            */
+            #endregion
+
 
 
             //var r = Exo_9.CountMax();

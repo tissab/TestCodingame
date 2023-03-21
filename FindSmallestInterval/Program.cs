@@ -7,7 +7,7 @@ namespace FindSmallestInterval
     {
         static void Main(string[] args)
         {
-            var res = Solution.FindSmallestInterval(new int[] { 15, 98, 22, 74, 44, 72});
+            var res = Solution.FindSmallestInterval(new int[] { -15,-98, -22, -74, -44, -72});
             Console.WriteLine("Le resultat est :"+ res);
         }
     }
