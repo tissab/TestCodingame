@@ -565,7 +565,7 @@ namespace TestCodingame
                    // catch ...
                }
 
-               quel extrait de code pouvez-vous utiliser?
+               Cet extrait de code peut être utiliser sans perdre la trace
 
                 - catch(Exption ex)
                  {

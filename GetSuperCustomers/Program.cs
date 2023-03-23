@@ -6,7 +6,9 @@ namespace GetSuperCustomers
 {
     class Order
     {
+        public int OrderID { get; set; }
         public string Customer { get; set; }
+        public string Contact { get; set; }
         public decimal Price { get; set; }  
     }
     internal class Program
@@ -33,12 +35,12 @@ namespace GetSuperCustomers
             */
 
             var orders = new List<Order>();
-            orders.Add(new Order { Customer = "C3", Price = 150m });
-            orders.Add(new Order { Customer = "C3", Price = 150m });
-            orders.Add(new Order { Customer = "C2", Price = 31m });
-            orders.Add(new Order { Customer = "C2", Price = 99m });
-            orders.Add(new Order { Customer = "C1", Price = 50m });
-            orders.Add(new Order { Customer = "C1", Price = 25m });
+            orders.Add(new Order { OrderID = 1,Contact = "013-20-14", Customer = "C3", Price = 150m });
+            orders.Add(new Order { OrderID = 1,Contact = "013-20-14", Customer = "C3", Price = 150m });
+            orders.Add(new Order { OrderID = 2,Contact = "016-21-12", Customer = "C2", Price = 31m });
+            orders.Add(new Order { OrderID = 2,Contact = "016-21-12", Customer = "C2", Price = 99m });
+            orders.Add(new Order { OrderID = 3,Contact = "017-23-15", Customer = "C1", Price = 50m });
+            orders.Add(new Order { OrderID = 3,Contact = "017-23-15", Customer = "C1", Price = 25m });
 
             var superCustomer = GetSuperCustomers(orders);
 
@@ -51,9 +53,20 @@ namespace GetSuperCustomers
             //             .Where(g => g.Sum(x => x.Price) >= 100 && g.Sum(x => x.Price) < 300)
             //             .Select(g => g.Key);
 
-            return from order in orders
+            var list = (from order in orders
+                       group order by new {order.OrderID, order.Contact, order.Customer } into gb
+                       where gb.Sum(x => x.Price) >= 100 && gb.Sum(x => x.Price) < 300
+                       select new
+                       {
+                          Id = gb.Key.OrderID,
+                          Contact = gb.Key.Contact,
+                          Customer = gb.Key.Customer,
+                          MontantTotal = gb.Sum(x => x.Price)
+                       }).ToList();
+
+              return from order in orders
                    group order by order.Customer into gb
-                   where gb.Sum(x => x.Price) >= 100 && gb.Sum(x => x.Price) <= 300
+                   where gb.Sum(x => x.Price) >= 100 && gb.Sum(x => x.Price) < 300
                    select gb.Key;
                    
 
