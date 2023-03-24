@@ -29,7 +29,8 @@ namespace Abstraction
 
             //var res = (t1== t2);
             var lastItem = numbers[^1];
-            var res = numbers[1..^1]; // => 2, 3, 4, 5, 6, 7
+            var res = numbers[1..]; // => 2, 3, 4, 5, 6, 7
+            var res0 = numbers[1..^1]; // => 2, 3, 4, 5, 6, 7,8
             var res1 = numbers[1..4]; // => 2, 3, 4
             var res2 = numbers[3..7]; // => 4, 5, 6, 7
             var res3 = numbers[^6..^1]; // => 3, 4, 5, 6, 7

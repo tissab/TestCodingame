@@ -7,7 +7,18 @@ namespace Check
     {
         static void Main(string[] args)
         {
+            string str1 = "[()]";
+            string str2 = "(()[])";
+            string str3 = "([)]";
+            string str4 = "((";
+            string str5 = "[(()])";
 
+            string str6 = "([(([[(([]))]]))])";
+            string str7 = "[](()()[[]])()[]([])";
+            string str8 = "([((([(([]))]))))))])";
+            string str9 = "[](()()[[]])[][[([])";
+
+            var res = Check(str1);
             Console.WriteLine("Hello World!");
         }
 

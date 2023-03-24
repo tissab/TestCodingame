@@ -10,7 +10,8 @@ namespace RebuildMessage
     {
         static void Main(string[] args)
         {
-            (int number1, int number2) numbers = (1, 3);
+            //Solution(new string[] { "Ab", "bc","cd","efg", "xyZ" });
+            var res = Solution(new string[] { "*====#", "X-+-+-+-+-+-Z","#______X","A.........*" });
             Console.WriteLine("Hello World!");
         }
 
@@ -19,38 +20,33 @@ namespace RebuildMessage
             var strStart = parts.Where(x => x.StartsWith('A')).FirstOrDefault();
             var strEnd = parts.Where(x => x.EndsWith('Z')).FirstOrDefault();
 
-            var strWithoutStartandEnd = parts.Where(x => !x.StartsWith('A') || !x.EndsWith('Z')).ToList();
+            var strArray = parts.Where(x => !x.Equals(strStart) && !x.Equals(strEnd)).ToList();
 
-            var end1 = strStart.ToCharArray()[strStart.ToCharArray().Length - 1];
-            var end2 = strEnd.ToCharArray()[strStart.ToCharArray().Length - 1];
+            List<string> result = new List<string> { strStart};
 
-            foreach(var str in strWithoutStartandEnd)
+            strArray.Add(strEnd);
+
+            foreach (var str in strArray)
             {
-                var c = str.ToCharArray()[str.ToCharArray().Length - 1];
+
+                var end = result[^1][^1];
+                var start = str[0];
+                if (start == end)
+                {
+                    var c = str[1..];
+                    result.Add(c);
+                }
+                else
+                {
+                    result.Add(str);
+                }
             }
-            return null;
+           
+
+            return string.Join("", result); ;
        
         }
     }
 
-    public class A : B
-    {
-        
-        public void RR()
-        {
-            str = "qwww";
-        }
-       
-    }
-
-
-    public class B : C
-    {
-        public string str = "foo";
-    }
-
-    public class C
-    {
-        
-    }
+   
 }
