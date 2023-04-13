@@ -7,7 +7,7 @@ namespace ComputeJoinPoint
     {
         static void Main(string[] args)
         {
-            var res = ComputeJoinPoint(471, 480);
+            var res = ComputeJoinPoint(11, 7);
             Console.WriteLine($"Hello World! {res}");
         }
 
@@ -16,21 +16,21 @@ namespace ComputeJoinPoint
             int nombre_1 = s1;
             int nombre_2 = s2;
 
-            if( 0 >= s1 || s1 >= 20000000 || 0 >= s2 || s2 >= 20000000)
+            if (0 >= s1 || s1 >= 20000000 || 0 >= s2 || s2 >= 20000000)
             {
                 return 0;
             }
 
-            if(nombre_1 == nombre_2)
+            if (nombre_1 == nombre_2)
             {
                 return nombre_1;
             }
 
             try
             {
-                while(nombre_1 != nombre_2)
+                while (nombre_1 != nombre_2)
                 {
-                    if(nombre_1 > nombre_2)
+                    if (nombre_1 > nombre_2)
                     {
                         nombre_2 += nombre_2.ToString().Sum(a => int.Parse(new string(new char[] { a })));
                     }
@@ -38,7 +38,7 @@ namespace ComputeJoinPoint
                     {
                         nombre_1 += nombre_1.ToString().Sum(a => int.Parse(new string(new char[] { a })));
                     }
-                }
+                 }
 
                 return nombre_1;
             }

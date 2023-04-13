@@ -73,8 +73,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnswerExists", "AnswerExist
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeCheckDigit", "ComputeCheckDigit\ComputeCheckDigit.csproj", "{C4A945EF-2C11-48FE-B3E9-6C5C7E3DBDF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeJoinPoint", "ComputeJoinPoint\ComputeJoinPoint.csproj", "{1A5922FA-652E-4F9D-A35C-E2342109FBAE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pompe", "Pompe\Pompe.csproj", "{AD8680D5-B122-4E06-AD43-902B41793681}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterLetter", "FilterLetter\FilterLetter.csproj", "{8317E4CC-D4ED-4E74-B846-B14C8567DBE3}"
@@ -121,37 +119,43 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSuperCustomers", "GetSup
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeNode", "TreeNode\TreeNode.csproj", "{FC62531E-C582-400A-ABA3-E249DCA2B9CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstOccurence", "FirstOccurence\FirstOccurence.csproj", "{3EC37C23-09D8-447C-B2BB-92CEC71CBA9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstOccurence", "FirstOccurence\FirstOccurence.csproj", "{3EC37C23-09D8-447C-B2BB-92CEC71CBA9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountPrimes", "CountPrimes\CountPrimes.csproj", "{EB52768F-D50E-4EB7-B1F8-95F2DF086E96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountPrimes", "CountPrimes\CountPrimes.csproj", "{EB52768F-D50E-4EB7-B1F8-95F2DF086E96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericComparer", "GenericComparer\GenericComparer.csproj", "{54EF4049-863C-49CA-B0A0-2D08F44AD9B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericComparer", "GenericComparer\GenericComparer.csproj", "{54EF4049-863C-49CA-B0A0-2D08F44AD9B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAtoi", "MyAtoi\MyAtoi.csproj", "{C5451EFC-CA1E-48D2-8E93-283B7CD3B820}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAtoi", "MyAtoi\MyAtoi.csproj", "{C5451EFC-CA1E-48D2-8E93-283B7CD3B820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencySort", "FrequencySort\FrequencySort.csproj", "{F92615E5-B503-4223-A348-6F0858EF2491}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrequencySort", "FrequencySort\FrequencySort.csproj", "{F92615E5-B503-4223-A348-6F0858EF2491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{33AB4F2E-BA9F-4BAB-B39D-C7CFB31FAFD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{33AB4F2E-BA9F-4BAB-B39D-C7CFB31FAFD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagramme", "Anagramme\Anagramme.csproj", "{4D847C30-2783-4D18-82D1-AC71DDBB680B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anagramme", "Anagramme\Anagramme.csproj", "{4D847C30-2783-4D18-82D1-AC71DDBB680B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsDuplicate", "ContainsDuplicate\ContainsDuplicate.csproj", "{E77C0172-3E8C-480A-95C4-A02CF5ACAE83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainsDuplicate", "ContainsDuplicate\ContainsDuplicate.csproj", "{E77C0172-3E8C-480A-95C4-A02CF5ACAE83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsUgly", "IsUgly\IsUgly.csproj", "{5D695A72-CA26-4455-9686-84982B687689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsUgly", "IsUgly\IsUgly.csproj", "{5D695A72-CA26-4455-9686-84982B687689}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsDuoDigit", "IsDuoDigit\IsDuoDigit.csproj", "{2577CEDB-DC48-4177-B9AA-594F518D0C00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IsDuoDigit", "IsDuoDigit\IsDuoDigit.csproj", "{2577CEDB-DC48-4177-B9AA-594F518D0C00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoSum", "TwoSum\TwoSum.csproj", "{FE44D0EF-899F-4DF7-8D2C-3593E862CF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwoSum", "TwoSum\TwoSum.csproj", "{FE44D0EF-899F-4DF7-8D2C-3593E862CF10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Table_Multiplication_Division", "Table_Multiplication_Division\Table_Multiplication_Division.csproj", "{94259873-352B-4BC7-ADF0-D0BCC371CC55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Table_Multiplication_Division", "Table_Multiplication_Division\Table_Multiplication_Division.csproj", "{94259873-352B-4BC7-ADF0-D0BCC371CC55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationDesDonnees", "ValidationDesDonnees\ValidationDesDonnees.csproj", "{E1582752-2FF8-42A0-8A59-500F57FB78D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationDesDonnees", "ValidationDesDonnees\ValidationDesDonnees.csproj", "{E1582752-2FF8-42A0-8A59-500F57FB78D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPower", "GetPower\GetPower.csproj", "{DA96B969-A5D6-4A93-A0CB-1E47D61F9967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPower", "GetPower\GetPower.csproj", "{DA96B969-A5D6-4A93-A0CB-1E47D61F9967}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome", "Palindrome\Palindrome.csproj", "{3D7D790C-D7F2-4374-939E-9462815E789E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Palindrome", "Palindrome\Palindrome.csproj", "{3D7D790C-D7F2-4374-939E-9462815E789E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPower_Iteration", "GetPower_Iteration\GetPower_Iteration.csproj", "{77D6907E-F96C-477F-916A-9C12F2DBD958}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPower_Iteration", "GetPower_Iteration\GetPower_Iteration.csproj", "{77D6907E-F96C-477F-916A-9C12F2DBD958}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeJoinPoint", "ComputeJoinPoint\ComputeJoinPoint.csproj", "{4636689B-DAEB-4294-AF89-464C70AF0BC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindLargestSquare", "FindLargestSquare\FindLargestSquare.csproj", "{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access_Concurrentiel", "Access_Concurrentiel\Access_Concurrentiel.csproj", "{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -299,10 +303,6 @@ Global
 		{C4A945EF-2C11-48FE-B3E9-6C5C7E3DBDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4A945EF-2C11-48FE-B3E9-6C5C7E3DBDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4A945EF-2C11-48FE-B3E9-6C5C7E3DBDF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A5922FA-652E-4F9D-A35C-E2342109FBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A5922FA-652E-4F9D-A35C-E2342109FBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A5922FA-652E-4F9D-A35C-E2342109FBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A5922FA-652E-4F9D-A35C-E2342109FBAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD8680D5-B122-4E06-AD43-902B41793681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD8680D5-B122-4E06-AD43-902B41793681}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD8680D5-B122-4E06-AD43-902B41793681}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -459,6 +459,18 @@ Global
 		{77D6907E-F96C-477F-916A-9C12F2DBD958}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77D6907E-F96C-477F-916A-9C12F2DBD958}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77D6907E-F96C-477F-916A-9C12F2DBD958}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4636689B-DAEB-4294-AF89-464C70AF0BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4636689B-DAEB-4294-AF89-464C70AF0BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4636689B-DAEB-4294-AF89-464C70AF0BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4636689B-DAEB-4294-AF89-464C70AF0BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
