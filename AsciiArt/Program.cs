@@ -6,8 +6,8 @@ namespace AsciiArt_
     {
         static void Main(string[] args)
         {
-            string art = AsciiArt
-            Answer.PrintChar("")
+            //string art = AsciiArt
+            Answer.ScanChar("A");
             Console.WriteLine("Hello World!");
         }
     }

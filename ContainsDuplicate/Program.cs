@@ -17,7 +17,7 @@ namespace ContainsDuplicate
         {
             return (from num in nums
                     group num by num into GB
-                    select GB.Count()).Where(x => x > 1).Any();
+                    select GB.Count()).Any(x => x > 1);
         }
     }
 }

@@ -2,7 +2,7 @@
 
 using System.Text;
 
-var res = Solution.Encode("aabaa");
+var res = Solution.Encode("abcbc");
 
 Console.WriteLine($"Hello, World! {res}");
 

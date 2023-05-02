@@ -14,7 +14,6 @@ namespace AnswerExists
         static bool AnswerExist(int[] ints, int k)
         {
             //return ints.Any(x => x == k);
-
             return Array.BinarySearch(ints, k) >= 0;
         }
     }

@@ -16,8 +16,6 @@ namespace CalculateTotalPrice
     {
         public static int CalculateTotalPrice(int [] prices, int discount)
         {
-            decimal x = 0;
-            decimal res = 0;
 
             if ((discount < 0 || discount > 100) || ( prices.Length == 0 ||prices.Length > 100) )
             {
@@ -26,8 +24,8 @@ namespace CalculateTotalPrice
 
             if(prices.Length > 1)
             {
-                x = prices.Max();
-                res =  Math.Floor(x * (100 - discount) / 100) + prices.Sum() - x;
+                decimal x = prices.Max();
+                decimal res =  Math.Floor(x * (100 - discount) / 100) + prices.Sum() - x;
 
                 return (int)res;
             }

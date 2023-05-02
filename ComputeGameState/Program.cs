@@ -23,7 +23,7 @@ public class code
     {
         { 0, "DEUCE" },
         { 1, "ADVANTAGE P1" },
-        { -1, "ADVANTAGE P2" }
+        { -1, "ADVANTAGE P2" }  
     };
 
     public static string ComputeGameState(string nameP1, string nameP2, string[] wins)

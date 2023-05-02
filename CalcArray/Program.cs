@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace CalcArray
 {
@@ -16,24 +17,23 @@ namespace CalcArray
     {
         public static int Calc(int[] array, int n1, int n2)
         {
-            int total = 0;
-            int index = 0;
+            //int total = 0;
+            //int index = 0;
 
-            foreach (int element in array)
-            {
-                if (index >= n1 && index <= n2)
-                {
-                    total += element;
-                    index++;
-                }
-            }
+            //foreach (int element in array)
+            //{
+            //    if (index >= n1 && index <= n2)
+            //    {
+            //        total += element;
+            //        index++;
+            //    }
+            //}
 
             // OU
 
-            //  int retour = array.Where((a, i) => i >= n1 && i <= n2).Sum();
+             int retour = array.Where((_,i) => i >= n1 && i <= n2).Sum();
 
-
-            return total;
+            return retour;
         }
     }
 

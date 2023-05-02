@@ -19,7 +19,7 @@ namespace ComputeCheckDigit
 
             // Somme de chiffre au position paire
 
-            result += arrayNum.Where((x, i) => i % 2 == 0).Sum();
+            result += arrayNum.Where((_, i) => i % 2 == 0).Sum();
 
             // Multiplier par 3
 
@@ -27,7 +27,7 @@ namespace ComputeCheckDigit
 
             // Ajouter des chiffres situés aux positions impaires
 
-            result += arrayNum.Where((x, i) => i % 2 != 0).Sum();
+            result += arrayNum.Where((_, i) => i % 2 != 0).Sum();
 
             // Recupéré le dernier chiffre du resultat
 

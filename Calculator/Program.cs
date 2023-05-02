@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Linq;
 
 namespace Calculator
 {
@@ -6,20 +8,22 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            var res = Sum("-1,001", "1,01");
+            var res = Sum("-1.001", "1.01");
             Console.WriteLine("Hello World! "+res);
 
         }
 
         static string Sum(params string[] numbers)
         {
-            decimal total = 0;
+           return numbers.Select(x => double.Parse(x,CultureInfo.InvariantCulture)).Sum().ToString();
 
-            foreach (string number in numbers)
-            {
-                total += decimal.Parse(number);
-            }
-            return total.ToString();
+            //decimal total = 0;
+
+            //foreach (string number in numbers)
+            //{
+            //    total += decimal.Parse(number);
+            //}
+            //return total.ToString();
         }
     }
 }

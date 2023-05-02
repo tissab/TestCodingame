@@ -7,7 +7,7 @@ namespace CountPrimes
     {
         static void Main(string[] args)
         {
-            var res = CountPrimes(1);
+            var res = CountPrimes(9);
             Console.WriteLine("Hello World!");
         }
 

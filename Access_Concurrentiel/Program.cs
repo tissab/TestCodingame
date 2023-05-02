@@ -13,7 +13,6 @@ namespace Access_Concurrentiel
     class Counter
     {
         private static int count = 0;
-
         private static readonly object countLock = new object();
         public static int Increment()
         {

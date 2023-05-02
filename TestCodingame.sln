@@ -155,7 +155,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeJoinPoint", "Compute
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindLargestSquare", "FindLargestSquare\FindLargestSquare.csproj", "{C1B73D51-D2F1-4A9F-ACDC-1B63CDCF2E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Access_Concurrentiel", "Access_Concurrentiel\Access_Concurrentiel.csproj", "{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Access_Concurrentiel", "Access_Concurrentiel\Access_Concurrentiel.csproj", "{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "funWithAnagrams", "funWithAnagrams\funWithAnagrams.csproj", "{002C3350-DA83-4EF6-A9FD-0E1927702B38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -471,6 +473,10 @@ Global
 		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A90FAC3A-512E-4304-BEF7-EFE847EA7EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002C3350-DA83-4EF6-A9FD-0E1927702B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002C3350-DA83-4EF6-A9FD-0E1927702B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002C3350-DA83-4EF6-A9FD-0E1927702B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002C3350-DA83-4EF6-A9FD-0E1927702B38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

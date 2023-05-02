@@ -32,19 +32,18 @@ namespace ComputeJoinPoint
                 {
                     if (nombre_1 > nombre_2)
                     {
-                        nombre_2 += nombre_2.ToString().Sum(a => int.Parse(new string(new char[] { a })));
+                        nombre_2 += nombre_2.ToString().Sum(a => int.Parse(new string(new char[] {a})));
                     }
                     else
                     {
-                        nombre_1 += nombre_1.ToString().Sum(a => int.Parse(new string(new char[] { a })));
+                        nombre_1 += nombre_1.ToString().Sum(a => int.Parse(new string(new char[] {a})));
                     }
-                 }
+                }
 
                 return nombre_1;
             }
-            catch (FormatException)
+            catch (FormatException ex)
             {
-
                 return 0;
             }
         }

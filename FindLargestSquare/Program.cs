@@ -14,8 +14,17 @@ namespace FindLargestSquare
                 { 1, 1, 1, 1, 1 },
                 { 0, 0, 1, 1, 1 },
                 { 0, 0, 1, 1, 1 },
-                { 1, 1, 0, 0, 0 }
+                { 1, 1, 0, 0, 0 },
             };
+
+            int[,] matrix_1 = new int[,]
+          {
+                { 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0 },
+                { 0, 0, 0, 0, 0 },
+          };
 
             int[,] matrix1 = new int[,]
            {
@@ -26,12 +35,39 @@ namespace FindLargestSquare
                 { 1, 1, 1, 1, 1 }
            };
 
-
-            var res = FindLargestSquare_1(matrix);
+            var res = FindLargestSquare_1(matrix_1);
 
             Console.WriteLine("Hello World!");
         }
 
+        public static int FindLargestSquare_2(int[,] matrix)
+        {
+            int n = matrix.GetLength(0);
+            int m = matrix.GetLength(1);
+            int[] prevArray = new int[m];
+            int maxRes = 0;
+            int nbre = 0;
+
+            for(int i = 0; i < n; i++)
+            {
+                for(int j = 0; j< m; j++)
+                {
+                    int x = matrix[i, j];
+                    if(x == 1 && x == prevArray[j])
+                    { 
+                        nbre++;
+                        if(nbre > 1)
+                        {
+                            maxRes = nbre;
+                        }
+                    }
+                    prevArray[j] = matrix[i, j];
+
+                }
+            }
+            return 0;
+        }
+        
         public static int FindLargestSquare(int[,] matrix)
         {
             int n = matrix.GetLength(0);
