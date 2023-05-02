@@ -16,9 +16,10 @@ namespace NombrePaire
             Console.WriteLine("Hello World!");
         }
 
+        //Cette fonction s'appelle egalement *Count*
         public static int NombredePaires(int n)
         {
-            if (n < 2 || n > 1000) return 0;
+            if (n < 2 || n > 10000) return 0;
             if (n == 1) return 0;
             return ((n - 1) + NombredePaires(n - 1));
         }
