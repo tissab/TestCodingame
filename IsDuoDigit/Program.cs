@@ -7,10 +7,10 @@ namespace IsDuoDigit
     {
         static void Main(string[] args)
         {
-            //var res = IsDuoDigit(12);
-            //var res1 = IsDuoDigit(110);
+            var res = IsDuoDigit(12);
+            var res1 = IsDuoDigit(110);
             var res2 = IsDuoDigit(-33333);
-            //var res3 = IsDuoDigit(102);
+            var res3 = IsDuoDigit(102);
 
             Console.WriteLine("Hello World!");
         }

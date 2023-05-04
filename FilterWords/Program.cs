@@ -18,6 +18,7 @@ namespace FilterWords
 
         static string[] FilterWords(string[] words, string letter)
         {
+            //return words.Where(x => x.Contains(letter)).ToArray();
             return words.Where(x => x.IndexOfAny(letter.ToCharArray()) > -1).ToArray();
         }
     }

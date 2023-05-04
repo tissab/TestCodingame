@@ -2,40 +2,37 @@
 
 using System.Text;
 
-var res = Solution.Encode("abcbc");
+var res = Solution.Encode_("aabbbcbbccca");
 
 Console.WriteLine($"Hello, World! {res}");
 
 
 class Solution
 {
-    public static string Encode(string plaintext)
+    public static string Encode_(string plaintext)
     {
-       var arrayChar = string.Join("",plaintext.Concat(" ")).ToCharArray();
+        var arrayChar = string.Join("", plaintext.Concat(" ")).ToCharArray();
 
-        StringBuilder stringBuilder= new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
         int cpt = 0;
 
-        for(int i = 0; i < arrayChar.Length; i++)
+        for (int i = 0; i <arrayChar.Length; i++)
         {
-            ++cpt;
-            for(int j = i+1; j < arrayChar.Length; j++)
+            if(i == 0)
             {
-                char xi = arrayChar[i];
-                char xj = arrayChar[j];
+                cpt++;
+                continue;
+            }
 
-                if (xi == xj)
-                {
-                    cpt++;
-                }
-                else
-                {
-                    stringBuilder.Append($"{cpt}{xi}");
-                    i = j-1;
-                    cpt = 0;
-                    break;
-                }
+            if (arrayChar[i-1] == arrayChar[i])
+            {
+                cpt++;
+            }
+            else
+            {
+                stringBuilder.Append($"{cpt}{arrayChar[i-1]}");
+                cpt = 1;
             }
         }
         return stringBuilder.ToString();

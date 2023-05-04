@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Find
 {
@@ -11,48 +10,51 @@ namespace Find
         static void Main(string[] args)
         {
             var numbers = new int[] { 1, 5, 8, 1, 2, 13, 0, 10, 3, 2, 11 };
-            var res = FindSumpair(numbers, 13);
+            var res = FindSumPair(numbers, 13);
 
             Console.WriteLine($"Le resultat est : {res}");
         }
 
-        public static int[] FindSumpair(int[] numbers, int k)
+        //-------------------------------------------------------//
+
+        static int FindMinDiff(int[] arr, int n)
         {
-            var pairs = new int[] { 0, 0 };
+            // Step 1: Sort the array
+            Array.Sort(arr);
 
-            List<int[]> ls = new List<int[]>();
+            // Step 2: Initialize minDiff with a large value
+            int minDiff = int.MaxValue;
 
-            for (int i = 0; i < numbers.Length; i++)
+            // Step 3: Find the minimum difference
+            for (int i = 0; i < n - 1; i++)
             {
-                for (int j = i + 1; j < numbers.Length; j++)
+                int diff = arr[i + 1] - arr[i];
+                if (diff < minDiff)
                 {
-                    if (numbers[i] + numbers[j] == k)
-                    {
-                        pairs = new int[] { i, j };
-                        ls.Add(pairs);
-                    }
+                    minDiff = diff;
                 }
             }
 
-            var res = ls.OrderBy(x => x[0]).First();
+            // Step 4: Return the minimum difference
+            return minDiff;
+        }
 
+        static int[] FindSumPair(int[] arr, int n)
+        {
+            var pairs = new int[] { 0, 0 };
+            List<int[]> ls = new List<int[]>();
+            var x = arr.Length - 1;
+            for (int i = 0; i < x; i++)
+            {
+                var temp = arr[i + 1] + arr[i];
+                if (arr[i+1]+arr[i] == n)
+                {
+                    pairs = new int[] { i, i+1 };
+                    ls.Add(pairs);
+                }
+            }
+            var res = ls.OrderBy(x => x[0]).First();
             return res;
         }
-
-        public static int FindMinDiff(int[] arr, int n)
-        {
-            int diff = int.MaxValue;
-
-            for (int i = 0; i < n - 1; i++)
-                for (int j = i + 1; j < n; j++)
-                    if (Math.Abs((arr[i] - arr[j])) < diff)
-                        diff = Math.Abs((arr[i] - arr[j]));
-            return diff;
-        }
-
-       
-
-
-       
     }
 }

@@ -17,12 +17,12 @@ namespace FrequencySort
         {
 
             var r = (from n in nums.OrderBy(n => n)
-                    group n by n into gb
-                    select new
-                    {
-                        id = gb.Key,
-                        nbr = gb.Count()
-                    }).OrderBy(x => x.nbr).ThenByDescending(x => x.id).ToArray();
+                        group n by n into gb
+                        select new
+                        {
+                            id = gb.Key,
+                            nbr = gb.Count()
+                        }).OrderBy(x => x.nbr).ThenByDescending(x => x.id).ToArray();
 
             List<int> order = new List<int>();
 
