@@ -10,6 +10,14 @@ namespace FindLargestSquare
         {
             int[,] matrix = new int[,]
             {
+                { 1, 1, 0, 0 },
+                { 1, 1, 0, 0 },
+                { 1, 1, 1, 0 },
+                { 1, 1, 1, 0 }
+            };
+
+            int[,] matrix_1 = new int[,]
+            {
                 { 1, 1, 0, 1, 0 },
                 { 1, 1, 1, 1, 1 },
                 { 0, 0, 1, 1, 1 },
@@ -17,7 +25,7 @@ namespace FindLargestSquare
                 { 1, 1, 0, 0, 0 },
             };
 
-            int[,] matrix_1 = new int[,]
+            int[,] matrix_2 = new int[,]
           {
                 { 0, 0, 0, 0, 0 },
                 { 0, 0, 0, 0, 0 },
@@ -26,7 +34,7 @@ namespace FindLargestSquare
                 { 0, 0, 0, 0, 0 },
           };
 
-            int[,] matrix1 = new int[,]
+            int[,] matrix_3 = new int[,]
            {
                 { 1, 1, 0, 1, 0 },
                 { 1, 1, 1, 1, 1 },
@@ -62,7 +70,9 @@ namespace FindLargestSquare
                     }
                     else
                     {
-                        dp[j] = Math.Min(prev, Math.Min(dp[j], dp[j - 1])) + 1;
+                        var i0 = prev; var i1 = dp[j]; var i2 = matrix[i, j];
+                        var i3 = Math.Min(prev, Math.Min(dp[j], dp[j - 1])) + 1;
+                        dp[j] = i3;
                     }
                     maxSize = Math.Max(maxSize, dp[j]);
                     prev = temp;
