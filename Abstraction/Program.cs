@@ -8,6 +8,11 @@ namespace Abstraction
     {
         static void Main(string[] args)
         {
+
+            //DateTime now = DateTime.Now.ParseExact("2020-01-03", "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+            //string formattedDate = now.ToString("yyyy-MM-dd");
+            //Console.WriteLine(formattedDate);
+
             Console.WriteLine("Hello World!");
 
             Shape s = new Square();
@@ -33,6 +38,10 @@ namespace Abstraction
             var res5 = numbers[^4..^1]; // => 5,6,7
             var res6 = numbers[^3..^0]; // => 6,7,8
             var res7 = numbers[^3..^1]; // => 6,7
+
+            var res8 = "208260013823232"[0..5];
+
+            var res9 = "208260013823232".Substring(0, 5);
 
         }
 

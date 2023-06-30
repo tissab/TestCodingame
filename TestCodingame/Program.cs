@@ -49,8 +49,7 @@ namespace TestCodingame
             Dans une application ASP.NET Core MVC, comment spécifier une classe Model dans une vue
             avec typage fort (strongly typed)
 
-            @model User
-             
+            @model User  
             */
 
             #endregion
@@ -62,7 +61,6 @@ namespace TestCodingame
             configurer manuellement le modèle de base de données
 
             OnModelCreating
-
             */
 
             #endregion
@@ -119,7 +117,7 @@ namespace TestCodingame
               var order = await _orderService.GetById(id);
               return OK(order);
             }
-            Cela retournera une réponse "404" page not found
+            Cela retournera une réponse HTTP 200 (OK)
             */
 
             #endregion
@@ -444,6 +442,7 @@ namespace TestCodingame
             #region Dictionnary
 
             /*
+             * 
             Comment les collisions de hachage sont-elles traitées dans la collection générique  Dictionary<Tkey,Tvalue> ? 
              
             */
@@ -686,7 +685,7 @@ namespace TestCodingame
             
              int.TryParse("1", out int num);
            
-            int.TryParse("1", out num);
+             int.TryParse("1", out num);
 
             */
             #endregion
