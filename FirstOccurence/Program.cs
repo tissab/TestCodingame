@@ -8,7 +8,18 @@ namespace FirstOccurence
     {
         static void Main(string[] args)
         {
-            var re = FirstOccurence("ab*de", "abcdexy");
+
+            var d = new DateTime();
+            var f = DateTime.Now.AddHours(2);
+            d = f.AddHours(3);
+
+            d.AddHours(2);
+            d.AddHours(5);
+
+            Console.WriteLine(f.Hour);
+
+
+            var re = FirstOccurence("ab*de", "TabYEabcdexy");
             Console.WriteLine("Hello World!");
         }
 

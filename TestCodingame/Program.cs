@@ -1260,6 +1260,30 @@ namespace TestCodingame
             - Le polymorphisme de coercition se fait à l'éxécution du programme
             - En C#, on peut hériter de plusieurs interfaces
 
+
+            L'encapsulation permet de clairement dissocier les spécifications d'une classe de son implémentation.
+
+            Correct : L'encapsulation est l'un des principes de base de la programmation
+            orientée objet (POO) qui permet de cacher les détails d'implémentation d'une classe
+            et de ne révéler que les spécifications (interface publique) aux utilisateurs de la classe.
+            Le polymorphisme paramétrique se fait à l'exécution du programme.
+
+            Incorrect : Le polymorphisme paramétrique, également appelé généricité,
+            se fait au moment de la compilation. Il permet d'écrire des classes ou
+            des méthodes qui peuvent fonctionner avec différents types de données
+            en utilisant des paramètres de type génériques.
+            Le polymorphisme de coercition se fait à l'exécution du programme.
+
+            Correct : Le polymorphisme de coercition, également appelé polymorphisme
+            d'exécution, se produit au moment de l'exécution du programme.
+            Il permet à une référence de classe de se comporter de manière polymorphique
+            en fonction du type réel de l'objet auquel elle fait référence.
+            En C#, on peut hériter de plusieurs interfaces.
+
+            Correct : En C#, une classe peut implémenter (hériter) plusieurs interfaces.
+            Cela permet à une classe de définir le comportement requis par plusieurs
+            contrats d'interface différents.
+
             */
             #endregion
 
@@ -1299,11 +1323,11 @@ namespace TestCodingame
             #region DateTime
             /*
             var d = new DateTime();
-            var f = DateTime.Now.AddHours(2);
+            var f = DateTime.Now.AddHours(2); => Initialisation
             d = f.AddHours(3);
             
             d.AddHours(2);
-            Console.WriteLine(f.Hour) => 0;
+            Console.WriteLine(f.Hour) => 23;
 
             */
             #endregion

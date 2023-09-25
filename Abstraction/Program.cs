@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Abstraction
 {
@@ -41,11 +42,43 @@ namespace Abstraction
 
             var res8 = "208260013823232"[0..5];
 
-            var res9 = "208260013823232".Substring(0, 5);
+            bool SecondOperand()
+            {
+                Console.WriteLine("Second operand is evaluated.");
+                return true;
+            }
+
+            var res9 = "208260013823232".StartsWith("20826") && SecondOperand();
+
+            var res10 = typeof(Grade).IsEnumDefined(5);
+
+            // Methode d'utilisation
+            Console.WriteLine(5.ToEnum<Grade>());
+
 
         }
 
     }
+
+    public enum Grade : int
+    {
+        A = 5, B = 4, C = 3, D = 2, F = 1
+    }
+
+    // Methode d'extension des types Enum
+    public static class ExtensionMethods
+    {
+        public static TEnum ToEnum<TEnum>(this int value)
+        {
+            if (typeof(TEnum).IsEnumDefined(value))
+                return (TEnum)(object)value;
+            return default;
+        }
+    }
+
+
+    
+
 
     class Shape { }
     class Square : Shape 
