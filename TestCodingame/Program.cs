@@ -503,7 +503,7 @@ namespace TestCodingame
             Lorsqu'il est placé sur un membre d'une classe, cela signifie que ce membre est accessible
             uniquement à partir de la classe elle-même et de ses classes dérivées situées dans le même assembly.
 
-            - Il restreint l'accès de ce membre aux memebres de la même classe ou de ses sous-classes, mais seulement
+            - Il restreint l'accès de ce membre aux membres de la même classe ou de ses sous-classes, mais seulement
             Si la sous-classe fait partie du même assembly que la classe.
             
             */

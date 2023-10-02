@@ -3,11 +3,11 @@
 
 using System.Runtime.ConstrainedExecution;
 
-string output = String.Concat(Code.GetAlphabet(true).Where(letter =>
-                letter.CompareTo("J") >= 0));
-Console.WriteLine(output);
+//string output = String.Concat(Code.GetAlphabet(true).Where(letter =>
+//                letter.CompareTo("J") >= 0));
+//Console.WriteLine(output);
 
-//Code.GetAlphaber_V1('J');
+Code.GetAlphaber_V1('J');
 
 
 
