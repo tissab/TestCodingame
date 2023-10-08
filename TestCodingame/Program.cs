@@ -3,8 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Threading;
 using System.Threading.Tasks;
 using TestCodingame.Exo10;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace TestCodingame
@@ -1354,7 +1357,53 @@ namespace TestCodingame
             */
             #endregion
 
+            #region CIL
+            //Dans une application.Net la traduction du code source(ecrit en C#, F# ou visual Basic) en code machine  passe par plusieurs etapes intermediaires
+            //Au cours de ce processus de traduction, les compilateurs specifiques a chaque langage produisent en code ecrite en...
+            //-Assembleur
+            //- C#
+            //- Code Barre
+            //- CIL * 
+            #endregion
 
+            #region Configure
+            //public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+            //{
+            //    // Autres configurations...
+
+            //    app.UseRouting();
+
+            //    app.UseEndpoints(endpoints =>
+            //    {
+            //        endpoints.MapControllerRoute(
+            //            name: "productRoute",
+            //            pattern: "product/{id}",
+            //            defaults: new { controller = "Product", action = "Details" } // Vous pouvez ajuster le nom du contrôleur et de l'action selon votre structure.
+            //        );
+
+            //        // Autres routes...
+            //    });
+            //} 
+            #endregion
+
+            #region HashCode
+            /*
+               Faux. Le contrat entre `Equals()` et `GetHashCode()` est en réalité inverse : 
+              il stipule que si deux objets sont égaux (selon la méthode `Equals()`), alors
+              leurs codes de hachage (`GetHashCode()`) doivent être égaux. En d'autres termes, 
+              si `obj1.Equals(obj2)` retourne `true`, alors `obj1.GetHashCode()` doit être égal à `obj2.GetHashCode()`.
+
+              Cependant, il ne garantit pas que si les codes de hachage sont égaux, alors les objets sont égaux.
+              C'est-à-dire que deux objets différents peuvent avoir le même code de hachage, mais cela ne signifie
+              pas nécessairement qu'ils sont égaux. C'est ce qu'on appelle une collision de hachage.
+
+               L'inverse n'est pas vrai : si deux objets ont le même code de hachage, cela ne signifie
+               pas automatiquement qu'ils sont égaux. C'est pourquoi il est important de mettre en œuvre correctement
+              `Equals()` et `GetHashCode()` en garantissant que la comparaison d'égalité (`Equals()`) reflète correctement
+              votre définition de l'égalité pour les objets.
+
+               */ 
+            #endregion
 
             //var r = Exo_9.CountMax();
 

@@ -43,9 +43,9 @@ namespace FindLargestSquare
                 { 1, 1, 1, 1, 1 }
            };
 
-            var res = FindLargestSquare(matrix_1);
+            var res = FindLargestSquare(matrix_2);
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Resultat trouve "+res);
         }
 
            

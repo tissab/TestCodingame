@@ -9,7 +9,14 @@ namespace FrequencySort
     {
         static void Main(string[] args)
         {
-            var res = FrequencySort(new int[] { -1, 1, -6, 4, 5, -6, 1, 4, 1 });
+            //var sd = new SortedDictionary<int, int>(); sd[3] = 3; sd[2] = 1; sd[1] = 2;
+
+            //foreach (var item in sd)
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
+
+            var res = FrequencySort_v1(new int[] { -1, 1, -6, 4, 5, -6, 1, 4, 1 });
             Console.WriteLine("Hello World!");
         }
 
@@ -32,6 +39,34 @@ namespace FrequencySort
             }
 
             return order.ToArray();
+        }
+
+        static int[] FrequencySort_v1(int[] arr)
+        {
+            if (arr == null || arr.Length <= 1)
+            {
+                return arr;
+            }
+
+            Dictionary<int, int> frequencyMap = new Dictionary<int, int>();
+
+            // Comptez la fréquence de chaque élément dans le tableau
+            foreach (int num in arr)
+            {
+                if (frequencyMap.ContainsKey(num))
+                {
+                    frequencyMap[num]++;
+                }
+                else
+                {
+                    frequencyMap[num] = 1;
+                }
+            }
+
+            // Triez le tableau en fonction de la fréquence (en ordre décroissant)
+            var sortedArr = arr.OrderBy(num => frequencyMap[num]).ThenByDescending(num => num).ToArray();
+
+            return sortedArr;
         }
     }
 }

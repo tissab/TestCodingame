@@ -8,6 +8,7 @@ namespace Calcul
     {
         static void Main(string[] args)
         {
+            Calcul.fact(8);
             Console.WriteLine("Hello World!");
         }
     }

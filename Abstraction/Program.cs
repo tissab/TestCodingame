@@ -16,18 +16,10 @@ namespace Abstraction
 
             Console.WriteLine("Hello World!");
 
-            Shape s = new Square();
-            Shape c = s as Circle;
+           
 
             var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-            //var isParsed = int.TryParse("1", out _);
-            //(Square, Circle) t1 = (new Square { Id = 1, name = "Man" }, new Circle { Id = 1, name = "Man" });
-            //(Square, Circle) t2 = (new Square { Id = 1, name = "Man" }, new Circle { Id = 1, name = "Man" });
-            //(int, int) i = (1, 2);
-            //(int, int) i1 = (1, 2);
-            //var r = (i == i1);
-            //var res = (t1== t2);
 
             var last = numbers[^1];     // => 8
             var res  = numbers[1..];    // => 2,3,4,5,6,7,8
@@ -55,12 +47,11 @@ namespace Abstraction
             // Methode d'utilisation
             Console.WriteLine(5.ToEnum<Grade>());
 
-
         }
 
     }
 
-    public enum Grade : int
+    public enum Grade 
     {
         A = 5, B = 4, C = 3, D = 2, F = 1
     }
@@ -77,21 +68,7 @@ namespace Abstraction
     }
 
 
-    
-
-
-    class Shape { }
-    class Square : Shape 
-    { 
-        public int Id { get; set; }
-        public string name { get; set; }
-    }
-    class Circle : Shape 
-    {
-        public int Id { get; set; }
-        public string name { get; set; }
-    }   
-
+   
     interface CapableDeVoler
     {
         void vole();

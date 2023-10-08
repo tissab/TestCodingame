@@ -11,7 +11,7 @@ namespace LocatUniversal
             Console.WriteLine("Hello World!");
         }
         
-        public static string locateSubDir(string baseDir) {
+        private static string locateSubDir(string baseDir) {
             
 		    string result = null;
 		    string[] files = Directory.GetFileSystemEntries(baseDir);
@@ -20,15 +20,12 @@ namespace LocatUniversal
                 
 			    if (Directory.Exists(file)) {
 				    result = locateSubDir(file);
-				    if(result != null ) {
-					return result;
-				    }
-			    } else {
+				    if(result != null ) return result;
+
+                } else {
 				    FileInfo fileInfo = new FileInfo(file);
-				    if(fileInfo.Name == "universe-formula") {
-					    return file;
-				    }
-			    }
+				    if(fileInfo.Name == "universe-formula") return file;
+                }
 		    }
 		    return null;
 	    }

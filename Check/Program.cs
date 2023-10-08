@@ -7,19 +7,18 @@ namespace Check
     {
         static void Main(string[] args)
         {
-            string str1 = "[()]";
-            string str2 = "(()[])";
-            string str3 = "([)]";
-            string str4 = "((";
-            string str5 = "[(()])";
-
-            string str6 = "([(([[(([]))]]))])";
-            string str7 = "[](()()[[]])()[]([])";
-            string str8 = "([((([(([]))]))))))])";
-            string str9 = "[](()()[[]])[][[([])";
-
-            var res = Check(str1);
+            var res1 = Check("[()]"); // true
+            var res2 = Check("(()[])"); // true
+            var res3 = Check("([)]"); // false
+            var res4 = Check("(("); // false
+            var res5 = Check("[(()])"); // false
+            var res6 = Check("([(([[(([]))]]))])"); // true
+            var res7 = Check("[](()()[[]])()[]([])"); // true
+            var res8 = Check("([((([(([]))]))))))])"); // false
+            var res9 = Check("[](()()[[]])[][[([])"); // false
             Console.WriteLine("Hello World!");
+
+            // stack is LIFO => Last In First Out => Premier Entre , Sort en Dernier
         }
 
         public static bool Check(string s)

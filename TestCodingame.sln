@@ -163,17 +163,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubSequence", "SubSequence\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetIdealNums", "GetIdealNums\GetIdealNums.csproj", "{C45F1304-1265-4C4A-A824-AB74701B7EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericComparable", "GenericComparable\GenericComparable.csproj", "{E24970E4-762A-4596-954B-2BC639F385FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericComparable", "GenericComparable\GenericComparable.csproj", "{E24970E4-762A-4596-954B-2BC639F385FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComputeMultipleSum", "ComputeMultipleSum\ComputeMultipleSum.csproj", "{18480BCF-7652-48BE-9B14-CBC611366337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComputeMultipleSum", "ComputeMultipleSum\ComputeMultipleSum.csproj", "{18480BCF-7652-48BE-9B14-CBC611366337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Node_", "Node_\Node_.csproj", "{54BC5F95-8771-42A5-B6E8-173656F5911C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Node_", "Node_\Node_.csproj", "{54BC5F95-8771-42A5-B6E8-173656F5911C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{0E8F24A1-C30F-41DE-9331-9963B85D1CA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{0E8F24A1-C30F-41DE-9331-9963B85D1CA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Next_", "Next_\Next_.csproj", "{EAAD5934-31CD-4072-8690-DBAE2EE9C038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Next_", "Next_\Next_.csproj", "{EAAD5934-31CD-4072-8690-DBAE2EE9C038}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterTrankMonitor", "WaterTrankMonitor\WaterTrankMonitor.csproj", "{E55D7E98-8DEA-4946-9C69-F4039BB45A2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterTrankMonitor", "WaterTrankMonitor\WaterTrankMonitor.csproj", "{E55D7E98-8DEA-4946-9C69-F4039BB45A2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tuple_", "Tuple_\Tuple_.csproj", "{C7E2743A-94C3-4416-B713-5F8D41AD2FB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplyFunction", "ApplyFunction\ApplyFunction.csproj", "{6099C755-CFBA-45B9-A988-5068C85EF84A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -525,6 +529,14 @@ Global
 		{E55D7E98-8DEA-4946-9C69-F4039BB45A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E55D7E98-8DEA-4946-9C69-F4039BB45A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E55D7E98-8DEA-4946-9C69-F4039BB45A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E2743A-94C3-4416-B713-5F8D41AD2FB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E2743A-94C3-4416-B713-5F8D41AD2FB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E2743A-94C3-4416-B713-5F8D41AD2FB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E2743A-94C3-4416-B713-5F8D41AD2FB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6099C755-CFBA-45B9-A988-5068C85EF84A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6099C755-CFBA-45B9-A988-5068C85EF84A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6099C755-CFBA-45B9-A988-5068C85EF84A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6099C755-CFBA-45B9-A988-5068C85EF84A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

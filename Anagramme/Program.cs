@@ -18,5 +18,7 @@ namespace Anagramme
             if(s.Length != t.Length) return false; 
             return s.ToCharArray().OrderBy(x => x).SequenceEqual(t.ToCharArray().OrderBy(x =>x));
         }    
+
+    
     }
 }

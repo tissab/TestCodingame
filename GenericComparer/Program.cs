@@ -8,6 +8,8 @@ namespace GenericComparer
     {
         static void Main(string[] args)
         {
+            var myString = new GenericComparer<string>();
+            var muInt = new GenericComparer<string>();
             Console.WriteLine("Hello World!");
         }
     }

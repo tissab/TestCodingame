@@ -17,7 +17,7 @@ namespace CalculateTotalPrice
         public static int CalculateTotalPrice(int [] prices, int discount)
         {
 
-            if ((discount < 0 || discount > 100) || ( prices.Length == 0 ||prices.Length > 100) )
+            if ((discount < 0 || discount > 100) || ( prices.Length == 0 || prices.Length > 100) )
             {
                 return -1;
             }
