@@ -20,7 +20,6 @@ namespace Abstraction
 
             var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-
             var last = numbers[^1];     // => 8
             var res  = numbers[1..];    // => 2,3,4,5,6,7,8
             var res0 = numbers[1..^1];  // => 2,3,4 5,6,7
